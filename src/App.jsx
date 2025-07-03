@@ -1,0 +1,41 @@
+import { BrowserRouter } from "react-router-dom"
+import About from "./components/About"
+import Contact from "./components/Contact"
+import Experience from "./components/Experience"
+import Feedbacks from "./components/Feedbacks"
+import Hero from "./components/Hero"
+import Navbar from "./components/Navbar"
+import Tech from "./components/Tech"
+import Works from "./components/Works"
+import StarsCanvas from "./components/canvas/Stars"
+
+function App() {
+ 
+  return (
+    <>
+      <div>
+        <BrowserRouter>
+        <div className="relative z-0 bg-primary">
+          <div className="bg-hero-pattern bg-cover bg-no-repeat">
+            <Navbar/>
+            <Hero/>
+          </div>
+          <About/>
+          {/* <Experience/> */}
+          <Tech/>
+          <Works/>
+          {/* <Feedbacks/> */}
+          <div className="relative z-0">
+            <Contact/>
+            <StarsCanvas/>
+
+          </div>
+
+        </div>
+        </BrowserRouter>
+      </div>
+    </>
+  )
+}
+
+export default App
